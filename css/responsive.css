@@ -1,0 +1,63 @@
+@media (max-width: 380px) {
+  .avatars { grid-template-columns: repeat(2, 1fr); }
+  .hud-id strong { max-width: 28vw; }
+}
+
+@media (min-width: 980px) {
+  .guru-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .guru-wrap { width: min(1080px, calc(100% - 16px)); padding-top: 12px; }
+  .guru-head, .guru-panel { padding: 16px; }
+  .guru-head { flex-direction: column; align-items: stretch; }
+  .guru-actions .btn { flex: 1 1 140px; }
+  .guru-tools { grid-template-columns: 1fr; }
+  .pass-wrap { align-items: stretch; }
+  .pager { justify-content: center; }
+  .pager .btn { flex: 1 1 120px; }
+}
+
+@media (max-width: 640px) {
+  .mission-card { grid-template-columns: 1fr; }
+  .progress-strip { grid-template-columns: 1fr; }
+  .map-board { padding: 22px 10px 14px 4px; }
+  .map-board::before { left: 21px; }
+  .mission-card { margin-left: 36px; }
+  .mission-card::before { left: -34px; width: 30px; height: 30px; }
+  .stamp { position: static; transform: none; margin-bottom: 8px; width: fit-content; }
+  .feedback { padding-right: 12px; }
+  .quiz-top { align-items: flex-start; }
+  .hud { padding-top: max(8px, env(safe-area-inset-top)); }
+}
+
+@media (min-width: 720px) {
+  .match-board { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat-grid, .summary-grid { grid-template-columns: repeat(4, 1fr); }
+  .summary-grid { grid-template-columns: 1fr 1fr; }
+  .badge-grid { grid-template-columns: repeat(3, 1fr); }
+  .welcome { grid-template-columns: auto 1fr auto; }
+  .welcome .btn { grid-column: auto; }
+}
+
+@media (min-width: 960px) {
+  .home-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 22px; align-items: start; }
+  .start-card { position: sticky; top: 12px; }
+  .mission-card:nth-child(even) { margin-right: 8%; }
+  .map-hero { grid-template-columns: 280px 1fr; align-items: center; }
+}
+
+@media (hover: hover) {
+  .btn:hover, .choice:hover, .match-card:hover, .avatar-btn:hover, .icon-btn:hover {
+    transform: translateY(-2px);
+  }
+  .btn:active, .btn:disabled { transform: translateY(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .hero-art { animation: none; }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#18243A">
+  <meta name="description" content="Detektif LHO, petualangan edukatif Teks Laporan Hasil Observasi untuk SMA Kelas X.">
+  <title>Detektif LHO — Pecahkan Misteri, Temukan Fakta!</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home" data-base=".">
+  <div class="home-wrap">
+    <div class="sky-bits" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <header class="home-bar">
+      <div class="brand"><span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><circle cx="28" cy="28" r="12" fill="none" stroke="currentColor" stroke-width="4"/><path d="M37 37 L50 50" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+      </span> Akademi Detektif</div>
+      <div class="home-tools">
+        <a class="icon-btn" href="pages/guru.html" title="Dashboard Guru" aria-label="Dashboard Guru">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 10 L54 22 L32 34 L10 22 Z" fill="#F5C451" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M20 26 V38 C24 44 40 44 44 38 V26" fill="none" stroke="currentColor" stroke-width="3"/><path d="M54 22 V36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="54" cy="40" r="3" fill="currentColor"/></svg></span>
+        </a>
+        <button type="button" class="icon-btn" data-sound-toggle data-action="toggle-sound" aria-pressed="true" aria-label="Matikan suara">
+          <span class="icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 26 H24 L36 16 V48 L24 38 H14 Z" fill="currentColor"/><path d="M42 24 Q50 32 42 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+        </button>
+      </div>
+    </header>
+    <div class="home-grid">
+      <section>
+        <p class="kicker">Bahasa Indonesia · SMA Kelas X · Fase E</p>
+        <h1 class="game-title">DETEKTIF <span>LHO</span></h1>
+        <p class="tagline">Pecahkan Misteri, Temukan Fakta!</p>
+        <div class="hero-art" id="heroArt"></div>
+        <article class="story">
+          <h2>Undangan bersampul emas</h2>
+          <p>Sebuah amplop dari Akademi Detektif tiba di mejamu. Di dalamnya ada empat kasus observasi yang belum tertutup.</p>
+          <p>Untuk menjadi Detektif LHO, kamu harus membaca jejak, memisahkan fakta dari opini, dan menyusun laporan hasil pengamatan.</p>
+        </article>
+      </section>
+      <section class="start-card" id="startPanel">
+        <div id="welcomeSlot"></div>
+        <h2>Siapa detektifnya?</h2>
+        <form id="startForm" novalidate>
+          <label class="field" for="playerName">Nama pemain
+            <input id="playerName" name="name" maxlength="18" autocomplete="nickname" placeholder="Contoh: Sena" required>
+          </label>
+          <label class="field" for="playerClass">Kelas
+            <input id="playerClass" name="class" maxlength="16" autocomplete="off" placeholder="Contoh: X-A" required>
+          </label>
+          <p class="field">Pilih avatar</p>
+          <div class="avatars" id="avatarPicker"></div>
+          <p id="formError" class="form-error" role="alert"></p>
+          <button class="btn btn-gold btn-block" type="submit">Mulai petualangan</button>
+        </form>
+        <div class="btn-row">
+          <button type="button" class="btn btn-ghost" data-action="how">Cara bermain</button>
+          <button type="button" class="btn btn-ghost" data-action="about">Tentang game</button>
+        </div>
+      </section>
+    </div>
+    <footer class="foot">Teks Laporan Hasil Observasi · Data pemain tersimpan di perangkat ini</footer>
+  </div>
+  <div id="modal-root"></div>
+  <script src="js/util.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/roster.js"></script>
+  <script src="js/missions.js"></script>
+  <script src="js/materials.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/achievements.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
